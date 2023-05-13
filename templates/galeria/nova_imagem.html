@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
             <section class="galeria" style="margin-left: 5em">
-                <form action="{% url 'login' %}" method="POST">
+                <form action="{% url 'nova_imagem' %}" method="POST" enctype="multipart/form-data">
                     <!-- {% csrf_token %} garante a segurança do formulário ao realizar o post -->
                     {% csrf_token %} 
                     <div class="row">
@@ -14,7 +14,7 @@
                         {% endfor %}
                     </div>
                     <div>
-                        <button class="btn btn-success col-12" style="padding: top 5px;" type="submit">Logar</button>
+                        <button class="btn btn-success col-12" style="padding: top 5px;" type="submit">Cadastrar Fotografia</button>
                     </div>
                 </form>
             </section>
